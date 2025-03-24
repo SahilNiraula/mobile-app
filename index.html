@@ -6,6 +6,7 @@
     <title>Mobile Application Development</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <main class="container">
@@ -40,6 +41,57 @@
 
         <section class="content">
             <h2 class="section-title">Why Choose TrekNepal</h2>
+            
+            <!-- Feature Cards Section -->
+            <div class="feature-cards">
+                <div class="feature-card" id="trek-planner">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Trek Planner</h3>
+                    <p>Create customized itineraries based on your experience level, preferences, and time constraints.</p>
+                </div>
+                
+                <div class="feature-card" id="weather-updates">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3>Weather Updates</h3>
+                    <p>Real-time weather forecasts and alerts for all major trekking routes and regions.</p>
+                </div>
+                
+                <div class="feature-card" id="ar-mountain">
+                    <div class="card-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>AR Mountain View</h3>
+                    <p>Use augmented reality to identify peaks, trails, and landmarks while on your trek.</p>
+                </div>
+                
+                <div class="feature-card" id="book-guides">
+                    <div class="card-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Book Guides</h3>
+                    <p>Connect with certified local guides who know the trails and culture to enhance your experience.</p>
+                </div>
+                
+                <div class="feature-card" id="emergency-sos">
+                    <div class="card-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3>Emergency SOS</h3>
+                    <p>One-touch emergency services connection with GPS location sharing for critical situations.</p>
+                </div>
+                
+                <div class="feature-card" id="trek-permits">
+                    <div class="card-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Trek Permits</h3>
+                    <p>Easily apply for and manage all necessary trekking permits and documentation.</p>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
@@ -47,10 +99,8 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <img src="/mobile-application/assests/treknepal (2).png" alt="" class="logo-icon">
-
                     </div>
                     <p>Connecting adventurers to the beautiful landscapes and cultural experiences of Nepal since 2020.</p>
-
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -81,33 +131,6 @@
         </footer>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('.nav');
-            
-            hamburger.addEventListener('click', function() {
-                nav.classList.toggle('active');
-                hamburger.classList.toggle('active');
-            });
-            
-            document.addEventListener('click', function(event) {
-                const isClickInsideNav = nav.contains(event.target);
-                const isClickInsideHamburger = hamburger.contains(event.target);
-                
-                if (!isClickInsideNav && !isClickInsideHamburger && nav.classList.contains('active')) {
-                    nav.classList.remove('active');
-                    hamburger.classList.remove('active');
-                }
-            });
-            
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && nav.classList.contains('active')) {
-                    nav.classList.remove('active');
-                    hamburger.classList.remove('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
